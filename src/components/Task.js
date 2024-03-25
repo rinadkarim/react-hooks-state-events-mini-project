@@ -1,11 +1,18 @@
 import React from "react";
+import Comments from "./Comments";
 
-function Task() {
+function Task({ task, onDelete }) {
+  const handleDeleteClick = () => {
+    onDelete(task.id);
+  };
+
   return (
-    <div className="task">
-      <div className="label">CATEGORY HERE</div>
-      <div className="text">TEXT HERE</div>
-      <button className="delete">X</button>
+    <div>
+      <p>
+        {task.text} - {task.category}
+      </p>
+      <button onClick={handleDeleteClick}>Delete</button>
+      <Comments taskId={task.id} />
     </div>
   );
 }
