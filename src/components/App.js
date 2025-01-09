@@ -34,10 +34,11 @@ function App() {
         onSelectCategory={handleCategorySelect}
       />
       <TaskList tasks={filteredTasks} onDelete={handleTaskDelete} />
-      <NewTaskForm categories={CATEGORIES} onTaskFormSubmit={handleTaskFormSubmit} />
+      <NewTaskForm categories={CATEGORIES.filter((cat) => cat !== "All")} onTaskFormSubmit={handleTaskFormSubmit} />
     </div>
   );
 }
 
 export default App;
+
 

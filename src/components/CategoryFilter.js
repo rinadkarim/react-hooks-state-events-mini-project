@@ -1,3 +1,4 @@
+import React from "react";
 
 function CategoryFilter({ categories, selectedCategory, onSelectCategory }) {
   return (
@@ -17,4 +18,5 @@ function CategoryFilter({ categories, selectedCategory, onSelectCategory }) {
 }
 
 export default CategoryFilter;
+
 
