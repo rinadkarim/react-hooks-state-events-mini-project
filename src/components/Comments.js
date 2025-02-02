@@ -1,9 +1,9 @@
-
-import React, { useState } from 'react';
+import React from "react";
 
 function Comments() {
   return (
     <div>Comments</div>
-  )
+  );
 }
+
 export default Comments;

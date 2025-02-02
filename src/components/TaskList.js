@@ -5,11 +5,12 @@ function TaskList({ tasks, onDelete }) {
   return (
     <div>
       {tasks.map((task) => (
-        <Task key={task.id} task={task} onDelete={onDelete} />
+        <Task key={task.id} id={task.id} text={task.text} category={task.category} onDelete={onDelete}  />
       ))}
     </div>
   );
 }
 
 export default TaskList;
+
 

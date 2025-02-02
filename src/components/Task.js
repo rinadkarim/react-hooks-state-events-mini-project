@@ -1,20 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { CATEGORIES, TASKS } from "../data";
 import Comments from "./Comments";
 
-function Task({ task, onDelete }) {
+function Task({ text,  id, category, onDelete }) {
   const handleDeleteClick = () => {
-    onDelete(task.id);
+    onDelete(id);
   };
+ 
 
+ 
   return (
-    <div>
-      <p>
-        {task.text} - {task.category}
-      </p>
+    <div className="task">
+      <div className="label">{category}</div>
+      <div className="text">{text}</div>
       <button onClick={handleDeleteClick}>Delete</button>
-      <Comments taskId={task.id} />
+      <Comments taskId={id} />
     </div>
   );
 }
 
 export default Task;
+
+
